@@ -5,6 +5,8 @@ import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 public class MainActivity extends AppCompatActivity {
@@ -42,6 +44,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        //Engranages Animaciones
+
     }
 
     public void visibleImagenes (){
@@ -51,6 +55,7 @@ public class MainActivity extends AppCompatActivity {
         engrojo.setVisibility(View.VISIBLE);
         ojo.setVisibility(View.VISIBLE);
         visibles = true;
+        animacionEngranages();
     }
     public void invisibleImagenes (){
         donut.setVisibility(View.INVISIBLE);
@@ -59,6 +64,24 @@ public class MainActivity extends AppCompatActivity {
         engrojo.setVisibility(View.INVISIBLE);
         ojo.setVisibility(View.INVISIBLE);
         visibles = false;
+        animacionEngranagesStop();
     }
+
+    public void animacionEngranages(){
+        Animation aniRotate = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anticlockwise);
+        engrojo.startAnimation(aniRotate);
+        Animation aniRotate2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anticlockwise);
+        engazul.startAnimation(aniRotate2);
+        Animation aniRotate3 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.clockwise);
+        engverde.startAnimation(aniRotate3);
+    }
+
+    public void animacionEngranagesStop(){
+        engrojo.clearAnimation();
+        engazul.clearAnimation();
+        engverde.clearAnimation();
+    }
+
+
 
 }
