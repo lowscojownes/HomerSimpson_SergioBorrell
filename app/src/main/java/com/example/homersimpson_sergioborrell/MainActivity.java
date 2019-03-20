@@ -44,8 +44,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        //Engranages Animaciones
-
     }
 
     public void visibleImagenes (){
@@ -55,7 +53,7 @@ public class MainActivity extends AppCompatActivity {
         engrojo.setVisibility(View.VISIBLE);
         ojo.setVisibility(View.VISIBLE);
         visibles = true;
-        animacionEngranages();
+        animacionesStart();
     }
     public void invisibleImagenes (){
         donut.setVisibility(View.INVISIBLE);
@@ -64,22 +62,26 @@ public class MainActivity extends AppCompatActivity {
         engrojo.setVisibility(View.INVISIBLE);
         ojo.setVisibility(View.INVISIBLE);
         visibles = false;
-        animacionEngranagesStop();
+        animacionesStop();
     }
 
-    public void animacionEngranages(){
-        Animation aniRotate = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anticlockwise);
-        engrojo.startAnimation(aniRotate);
-        Animation aniRotate2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anticlockwise);
-        engazul.startAnimation(aniRotate2);
-        Animation aniRotate3 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.clockwise);
-        engverde.startAnimation(aniRotate3);
+    public void animacionesStart(){
+        Animation anticlockwise = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anticlockwise);
+        engrojo.startAnimation(anticlockwise);
+        Animation anticlockwise2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.anticlockwise);
+        engazul.startAnimation(anticlockwise2);
+        Animation clockwise = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.clockwise);
+        engverde.startAnimation(clockwise);
+        Animation rotarDonut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.donut_arriba_abajo);
+        donut.startAnimation(rotarDonut);
+        rotarDonut.setRepeatCount(Animation.INFINITE);
     }
 
-    public void animacionEngranagesStop(){
+    public void animacionesStop(){
         engrojo.clearAnimation();
         engazul.clearAnimation();
         engverde.clearAnimation();
+        donut.clearAnimation();
     }
 
 
