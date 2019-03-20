@@ -2,6 +2,7 @@ package com.example.homersimpson_sergioborrell;
 
 import android.graphics.drawable.AnimationDrawable;
 import android.media.Image;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -13,6 +14,8 @@ public class MainActivity extends AppCompatActivity {
 
     ImageView donut, engazul, engverde, engrojo, ojo, titulo;
     Boolean visibles;
+    MediaPlayer musica;
+    Boolean musicaOn = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +43,20 @@ public class MainActivity extends AppCompatActivity {
                     invisibleImagenes();
                 }else{
                     visibleImagenes();
+                }
+            }
+        });
+
+        musica = MediaPlayer.create(getApplicationContext(), R.raw.the_simpsons);
+        musicaOn = false;
+        donut.setOnClickListener(new View.OnClickListener(){
+            public void onClick (View v){
+                if (!musicaOn){
+                    musica.start();
+                    musicaOn = true;
+                }else{
+                    musica.stop();
+                    musicaOn = false;
                 }
             }
         });
