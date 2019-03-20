@@ -74,7 +74,8 @@ public class MainActivity extends AppCompatActivity {
         engverde.startAnimation(clockwise);
         Animation rotarDonut = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.donut_arriba_abajo);
         donut.startAnimation(rotarDonut);
-        rotarDonut.setRepeatCount(Animation.INFINITE);
+        Animation animacionOjo = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.animacion_ojo);
+        ojo.startAnimation(animacionOjo);
     }
 
     public void animacionesStop(){
@@ -82,6 +83,7 @@ public class MainActivity extends AppCompatActivity {
         engazul.clearAnimation();
         engverde.clearAnimation();
         donut.clearAnimation();
+        ojo.clearAnimation();
     }
 
 

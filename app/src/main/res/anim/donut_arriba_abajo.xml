@@ -4,18 +4,20 @@
     android:interpolator="@android:anim/linear_interpolator"
     android:fillAfter="true">
 
-    <translate
-        android:duration="1000"
-        android:fillAfter="true"
-        android:fromYDelta="0%p"
-        android:toYDelta="10%p" />
+    <rotate android:fromDegrees="0" android:toDegrees="360"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:duration="2000"
+        android:interpolator="@android:anim/linear_interpolator"
+        android:repeatCount="infinite"/>
 
     <translate
-        android:duration="1000"
+        android:duration="800"
         android:fillAfter="true"
         android:fromYDelta="0%p"
-        android:startOffset="800"
-        android:toYDelta="-10%p" />
+        android:toYDelta="10%p"
+        android:repeatMode="reverse"
+        android:repeatCount="infinite"/>
 
 
 </set>
