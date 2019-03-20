@@ -2,4 +2,9 @@
     <string name="app_name">HomerSimpson_SergioBorrell</string>
     <string name="homer">Homer</string>
     <string name="titulo">titulo</string>
+    <string name="engranage_azul">engranage azul</string>
+    <string name="ojo">ojo</string>
+    <string name="engranage_rojo">engranage rojo</string>
+    <string name="engranage_verde">engranage verde</string>
+    <string name="donut">donut</string>
 </resources>

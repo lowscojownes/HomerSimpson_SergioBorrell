@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-
     <ImageView
         android:id="@+id/simpsonstitle"
         android:layout_width="336dp"
@@ -33,37 +32,79 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.277"
         app:srcCompat="@drawable/homer_simpson" />
 
     <ImageView
         android:id="@+id/engBlau"
         android:layout_width="66dp"
         android:layout_height="62dp"
-        android:layout_marginBottom="212dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="132dp"
+        android:layout_marginRight="132dp"
+        android:layout_marginBottom="220dp"
+        android:contentDescription="@string/engranage_azul"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/engVermell"
+        app:layout_constraintVertical_bias="0.375"
+        app:srcCompat="@drawable/engranatge_blau" />
+
+    <ImageView
+        android:id="@+id/engVermell"
+        android:layout_width="115dp"
+        android:layout_height="101dp"
+        android:layout_marginTop="48dp"
+        android:contentDescription="@string/engranage_rojo"
         app:layout_constraintEnd_toStartOf="@+id/engVerd"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/engranatge_vermell" />
+
+    <ImageView
+        android:id="@+id/ull"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/ojo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/engBlau"
         app:layout_constraintTop_toBottomOf="@+id/engVermell"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/engranatge_blau" />
+        app:srcCompat="@drawable/ull" />
 
     <ImageView
         android:id="@+id/engVerd"
         android:layout_width="65dp"
         android:layout_height="78dp"
-        android:layout_marginTop="72dp"
-        android:layout_marginEnd="68dp"
-        android:layout_marginRight="68dp"
+        android:layout_marginTop="52dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginRight="56dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/engranage_verde"
+        app:layout_constraintBottom_toTopOf="@+id/engBlau"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@drawable/engranatge_verd" />
 
     <ImageView
-        android:id="@+id/engVermell"
-        android:layout_width="111dp"
-        android:layout_height="101dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintEnd_toStartOf="@+id/engVerd"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/engranatge_vermell" />
+        android:id="@+id/donut"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:contentDescription="@string/donut"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/homer"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/simpsonstitle"
+        app:srcCompat="@drawable/donut" />
 
 </android.support.constraint.ConstraintLayout>
